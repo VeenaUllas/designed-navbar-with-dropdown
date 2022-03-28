@@ -9,7 +9,7 @@
     <title>Sidebar with Dropdown</title>
 </head>
 <body>
-    <div class="sidebar close">
+    <div class="sidebar">
         <div class="logo-details">
             <i class='bx bxl-bootstrap'></i>
              <span class="logo-name">Brototype</span>
@@ -22,17 +22,21 @@
                         <i class='bx bx-home  icon'></i>
                         <span class="link-name">Home</span> 
                     </a>
+                    <ul class="sub-menu blank">
+                        <li> <a class="link-name" href="#">Home</a> </li>
+                    </ul>
                 </li>
                 <li>
                 <div class="icon-link">
                     <a href="#">
-                        <i class='bx bx-collection'></i>
+                        <i class='bx bxs-user' ></i>
                         <span class="link-name">About Me</span> 
                     </a> 
-                    <i class="bx bxs-chevron-down arrow"></i>           
+                    <i class="bx bxs-chevron-down arrow"></i>  
+                             
                 </div>
                 <ul class="sub-menu">
-                    <li> <a class="link-name" href="#">Skills</a> </li>
+                    <li> <a href="#">Skills</a> </li>
                     <li> <a href="#">Education</a> </li>
                     <li> <a href="#">Gallery </a> </li>
                 </ul>
@@ -40,10 +44,12 @@
             <li>
                 <div class="icon-link">
                     <a href="#">
-                        <i class='bx bx-collection'></i>
+                        <i class='bx bx-layer'></i>
                         <span class="link-name">Experience</span> 
                     </a> 
-                    
+                    <ul class="sub-menu blank">
+                        <li> <a class="link-name" href="#">Experience</a> </li>
+                    </ul>
                     
                 </div>
                
@@ -51,13 +57,14 @@
             <li>
                 <div class="icon-link">
                     <a href="#">
-                        <i class='bx bx-collection'></i>
+                        <i class='bx bx-wrench'></i>
                         <span class="link-name">Services</span> 
                     </a> 
-                    <i class="bx bxs-chevron-down arrow"></i>           
+                    <i class="bx bxs-chevron-down arrow"></i> 
+                        
                 </div>
                 <ul class="sub-menu">
-                    <li> <a class="link-name" href="#">Development</a> </li>
+                    <li> <a href="#">Development</a> </li>
                     <li> <a href="#">Training</a> </li>
                     <li> <a href="#">Others</a> </li>
                 </ul>
@@ -65,13 +72,14 @@
             <li>
                 <div class="icon-link">
                     <a href="#">
-                        <i class='bx bx-collection'></i>
+                        <i class='bx bxs-like'></i>
                         <span class="link-name">Interests</span> 
                     </a> 
-                    <i class="bx bxs-chevron-down arrow"></i>           
+                    <i class="bx bxs-chevron-down arrow"></i> 
+                              
                 </div>
                 <ul class="sub-menu">
-                    <li> <a class="link-name" href="#">Influencers</a> </li>
+                    <li> <a href="#">Influencers</a> </li>
                     <li> <a href="#">Companies</a> </li>
                     <li> <a href="#">Groups</a> </li>
                     <li> <a href="#">Schools</a> </li>
@@ -80,46 +88,58 @@
             <li>
                 <div class="icon-link">
                     <a href="#">
-                        <i class='bx bx-collection'></i>
+                        <i class='bx bx-award'></i>
                         <span class="link-name">Achievement</span> 
                     </a> 
+                    <ul class="sub-menu blank">
+                        <li> <a class="link-name" href="#">Achievement</a> </li>
+                    </ul>   
                             
                 </div>
             </li>
             <li>
                 <div class="icon-link">
                     <a href="#">
-                        <i class='bx bx-collection'></i>
+                        <i class='bx bxs-contact'></i>
                         <span class="link-name">Contact Me</span> 
                     </a> 
+                    <ul class="sub-menu blank">
+                        <li> <a class="link-name" href="#">Contact</a> </li>
+                    </ul>   
                             
                 </div>
             </li>
+            <div class="blank-area">
+
+            </div>
            
-                
             <li>
+            
                 <div class="icon-link">
-                    <div class="profile-details">
+                  
+                    <div class="profile-details ">
                         <div class="profile-content">
                             <img src="images/nk1.png" alt="pic">
                         </div> 
                        <div class="profile-doz">
                           <div class="profile-name">Nikhil Kilivayil</div>
-                          <div class="profile-job">Entrepreneur</div>
-                        
+                          <span class="profile-job">Entrepreneur</span>
+                          <ul class="sub-menu blank">
+                            <li> <a class="link-name" href="#">Connect </a> </li>
                         </div>
-                      <i class="bx bxs-chevron-down arrow"></i>           
+                        <i class='bx bx-log-out'></i>        
                     </div>
-                   <ul class="social-menu">
-                    <li> <a class="fb-link" href="#"><i class='bx bxl-facebook-square'></i></a> </li>
-                    <li> <a href="#"><i class='bx bxl-instagram-alt'></i></a> </li>
-                    <li> <a href="#"><i class='bx bxl-github'></i></a> </li>
-                    <li> <a href="#"><i class='bx bxl-linkedin-square'></i></a> </li>
-                </ul>
+                   
                 </div>
+        
             </li>
-          
     </ul>
     </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+        </div>
+    </section>
+    <script src="style.js"></script>
 </body>
 </html>

@@ -13,9 +13,12 @@
     left:0;
     height: 100%;
     width: 260px;
-    background:#0f0e20;
-    border-radius:0 20px 20px 0; 
-
+    background:#0f0e20; 
+    z-index: 100;
+    transition: all 0.5s ease;
+}
+.sidebar.close{
+    width: 78px;
 }
 .sidebar .logo-details{
     height: 60px;
@@ -36,10 +39,25 @@ line-height: 50px;
     font-size: 22px;
     color: #fff;
     font-weight: 600;
+    transition: 0.3s ease;
+    transition-delay: 0.1s;
     }
+.sidebar.close .logo-details .logo-name {
+   opacity: 0; 
+   pointer-events: none;
+   transition-delay: 0s;
+}
 .sidebar .nav-link{
        height: 100%;
     padding-top: 30px;
+    overflow: auto;
+}
+.sidebar.close .nav-link{
+    overflow: visible;
+}
+
+.sidebar .nav-link::-webkit-scrollbar{
+    display: none;
 }
 .sidebar .nav-link li{
     position: relative;
@@ -51,18 +69,30 @@ line-height: 50px;
     background:#363547;
 }
 .sidebar .nav-link li .icon-link{
-display: flex;
-align-items: center;
-justify-content: space-between;
-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+.sidebar.close .nav-link li .icon-link{
+    display: block;
 }
 .sidebar .nav-link li i{
-height: 50px;
-min-width: 78px;
-text-align: center;
-line-height: 50px;
-color: #fff;
-font: size 18px;
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font: size 18px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.sidebar .nav-link li.showMenu i.arrow{
+    transform: rotate(-180deg);
+
+}
+.sidebar.close .nav-link  i.arrow{
+    display: none;
 }
 .sidebar .nav-link li  a{
     display: flex;
@@ -71,19 +101,24 @@ font: size 18px;
     color: #fff;
 
 }
-.sidebar .nav-link li a .link-name{
+.sidebar .nav-link li  .link-name{
     font-size: 15px;
     font-weight: 300;
     color: #fff;
     
 }
-.sidebar .nav-link li .sub-menu{
-    padding:8px 8px 16px 90px;
+.sidebar.close .nav-link li .link-name{
+    opacity:0;
+    pointer-events: none;
+}
+.sidebar .nav-link li  .sub-menu{
+    padding:8px 8px 16px 100px;
     margin-top: -10px;
     background: #0f0e20;
-    /*display: none;*/
-
-
+    display: none;
+}
+.sidebar .nav-link li.showMenu .sub-menu{
+    display: block;
 }
 .sidebar .nav-link li .sub-menu a{
     color:#fff;
@@ -95,7 +130,7 @@ font: size 18px;
 }
 .sidebar .nav-link li .sub-menu a:hover{
     opacity: 1; 
-    background: #141322;    
+    background: #0b0a18;
 }
 
 .sidebar.close .nav-link li .sub-menu{
@@ -104,45 +139,74 @@ left:100%;
 top: -10px;
 margin-top: 0px;
 padding:20px 30px;
-border-radius: 0 40px;
-transition: all 0.4s ease;
+border-radius: 5px 30px;
 opacity: 0;
+display: block;
 pointer-events: none;
 }
 .sidebar.close .nav-link li:hover .sub-menu{
- top: 0px;
- opacity: 1;
-pointer-events:auto ; 
+    top: 10px;
+    opacity: 1;
+    pointer-events:auto ; 
+    transition: all 0.4s ease;
 }
-.sidebar .nav-link li .sub-menu .link-name{
+.sidebar.close .nav-link li .sub-menu .link-name{
     display: none;
     }
-    .sidebar.close .nav-link li .sub-menu .link-name{
+.sidebar.close .nav-link li .sub-menu .link-name{
         font-size: 15px;
-        display: block;
+        display:block;
+        opacity:1 ;
     
-    }
+}
+.sidebar .nav-link li .sub-menu.blank{
+    opacity: 1;
+    pointer-events: auto;
+padding: 3px 10px 6px 15px;
+border-radius:0 20px ;
+opacity: 0;
+pointer-events: none;
+transition:0s ;
+  
+}
+.sidebar .nav-link li .sub-menu.blank{
+    top: 50%;
+    transform:translateY(-50%) ;
+}
+.blank-area{
+    width: 100%;
+    height: 200px;
+}
 
 .sidebar .profile-details{
-    position: fixed;
-    height: 5em;
-    bottom: 0.9em;
-    margin-left: 2em;
+    position:fixed;
+    width: 260px;
+    bottom: 0em;
+    padding-left: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    background: #1d1d36;
+    transition: all 0.4s ease;
 }
-.sidebar .profile-details:hover{
-
+.sidebar.close .profile-details{
+    background: none;
 }
+.sidebar.close .profile-details{
+    width: 78px;
+} 
 
-.sidebar .profile-details img{
-height: 45px;
-width: 45px;
+.sidebar .profile-details img{ 
+    padding-top: 5px;
+height: 54px;
+width: 54px;
 object-fit: cover;
 border-radius: 15px;
+transition: all 0.5s ease;
 
+}
+.sidebar.close .profile-details img{
+    margin-left: -14px;
 }
 .sidebar .profile-details .profile-name,
 .sidebar .profile-details .profile-job{
@@ -151,53 +215,35 @@ font-size: 14px;
 font-weight:100;
 font-family: cursive;
 padding-left: 0.9em;
+white-space: nowrap;
+}
+.sidebar.close .profile-details i,
+.sidebar.sidebar.close .profile-details .profile-name,
+.sidebar.sidebar.close .profile-details .profile-job{
+display: none;
+
 }
 .sidebar .profile-details .profile-job{
     font-size: 12px;
     padding-left: 1.1em;
 }
-.sidebar .nav-link li .social-menu{
-    padding:8px 8px 16px 90px;
-    margin-top: -10px;
-    background: #0f0e20;
-    /*display: none;*/
-
+.home-section{
+    position: relative;
+    background: #d8dee9;
+    height: 100vh;
+    left: 260px;
+    width: calc(100%-260px);
+    transition: all 0.5s ease;
 }
-.sidebar .nav-link  li .social-menu a{
-    color:#fff;
-    font-size: 15px;
-    padding: 5px 0;
-    opacity: 0.7;
-    transition: all 0.3s ease;
-
+.sidebar.close ~ .home-section{
+    left: 78px;
+    width: calc(100% - 78px);
 }
-.sidebar .nav-link  li .social-menu a:hover{
-    opacity: 1; 
-    background: #141322;
+.home-section .home-content .bx-menu{
+    position: relative;
+    margin: 6px 10px;
+    color: #0b0a18;
+    font-size: 35px;
+    cursor: pointer;
     
 }
-.sidebar.close .nav-link  li .social-menu {
-position: relative;
-left:100%;
-bottom: -10px;
-margin-top: 0px;
-padding:5px 2px;
-border-radius:0 40px;
-transition: all 0.4s ease;
-opacity: 0;
-pointer-events: none;
-}
-.sidebar.close .nav-link li:hover .social-menu{
-    bottom:0px;
-    opacity: 1;
-   pointer-events:auto; 
-}
-.sidebar .nav-link li .social-menu .link-name{
-    display: none;
-    }
-    .sidebar.close .nav-link li .social-menu .link-name{
-        font-size: 15px;
-        display: block;
-    
-    }  
- 
