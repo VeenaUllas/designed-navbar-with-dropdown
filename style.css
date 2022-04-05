@@ -7,18 +7,34 @@
     box-sizing: border-box;
 }
 
+body{
+    position: relative;
+    background-color: rgb(5, 5, 5)
+}
+
+
+
 .sidebar{
    position: fixed;
     top:0;
     left:0;
     height: 100%;
     width: 260px;
-    background:#0f0e20; 
-    z-index: 100;
+    background:#02060f;
+    opacity:1;
+    z-index:100 ;
     transition: all 0.5s ease;
+
 }
 .sidebar.close{
     width: 78px;
+    opacity: 1;
+    background: #02060f;
+  
+}
+.sidebar.close:hover{
+   background:#02060f;
+   opacity: 1;
 }
 .sidebar .logo-details{
     height: 60px;
@@ -54,6 +70,10 @@ line-height: 50px;
 }
 .sidebar.close .nav-link{
     overflow: visible;
+    
+}
+.sidebar.close .nav-link li i:hover{
+    background-color: #454f53;
 }
 
 .sidebar .nav-link::-webkit-scrollbar{
@@ -66,7 +86,7 @@ line-height: 50px;
     transition: all 0.4s ease;
 }
 .sidebar .nav-link li:hover{
-    background:#363547;
+    background:#8d939471;
 }
 .sidebar .nav-link li .icon-link{
     display: flex;
@@ -83,7 +103,7 @@ line-height: 50px;
     text-align: center;
     line-height: 50px;
     color: #fff;
-    font: size 18px;
+    font: size 20px;
     transition: all 0.3s ease;
     cursor: pointer;
 }
@@ -112,9 +132,9 @@ line-height: 50px;
     pointer-events: none;
 }
 .sidebar .nav-link li  .sub-menu{
-    padding:8px 8px 16px 100px;
+    padding:8px 8px 16px 95px;
     margin-top: -10px;
-    background: #0f0e20;
+    background: #050f23;
     display: none;
 }
 .sidebar .nav-link li.showMenu .sub-menu{
@@ -124,13 +144,14 @@ line-height: 50px;
     color:#fff;
     font-size: 15px;
     padding: 5px 0;
-    opacity: 0.7;
+    opacity: 1;
     transition: all 0.3s ease;
+    font-weight: 100;
 
 }
 .sidebar .nav-link li .sub-menu a:hover{
     opacity: 1; 
-    background: #0b0a18;
+    background:#8d93943a;
 }
 
 .sidebar.close .nav-link li .sub-menu{
@@ -143,6 +164,7 @@ border-radius: 5px 30px;
 opacity: 0;
 display: block;
 pointer-events: none;
+background: #050f23;
 }
 .sidebar.close .nav-link li:hover .sub-menu{
     top: 10px;
@@ -157,11 +179,12 @@ pointer-events: none;
         font-size: 15px;
         display:block;
         opacity:1 ;
+        
     
 }
 .sidebar .nav-link li .sub-menu.blank{
-    opacity: 1;
-    pointer-events: auto;
+opacity: 1;
+pointer-events: auto;
 padding: 3px 10px 6px 15px;
 border-radius:0 20px ;
 opacity: 0;
@@ -176,18 +199,22 @@ transition:0s ;
 .blank-area{
     width: 100%;
     height: 200px;
+    cursor: auto;
 }
 
 .sidebar .profile-details{
     position:fixed;
     width: 260px;
     bottom: 0em;
-    padding-left: 30px;
+    padding-left: 23px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #1d1d36;
+    background: #050f23;
     transition: all 0.4s ease;
+}
+.sidebar .profile-details:hover{
+    background: #454f53;
 }
 .sidebar.close .profile-details{
     background: none;
@@ -197,7 +224,7 @@ transition:0s ;
 } 
 
 .sidebar .profile-details img{ 
-    padding-top: 5px;
+padding-top: 5px;
 height: 54px;
 width: 54px;
 object-fit: cover;
@@ -229,21 +256,129 @@ display: none;
 }
 .home-section{
     position: relative;
-    background: #d8dee9;
     height: 100vh;
     left: 260px;
     width: calc(100%-260px);
     transition: all 0.5s ease;
+   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    
+          
 }
 .sidebar.close ~ .home-section{
     left: 78px;
     width: calc(100% - 78px);
+    background-color: #12c0de3a;
 }
+.home-section .bx-menu{
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+}
+
 .home-section .home-content .bx-menu{
-    position: relative;
-    margin: 6px 10px;
-    color: #0b0a18;
+    width: 100%;
+    padding: 2px;
+    color: #050f23;
     font-size: 35px;
-    cursor: pointer;
-    
+    cursor: pointer;  
+   
+}
+.home-bg{
+    margin-top:-0.5px;
+    position: relative;
+    height: 100vh;
+    width: calc(100%-260px);
+    transition: all 0.5s ease;
+    background: #dbdce1;
+   }
+.home-section .home-content .home-bg{
+    color: white;
+    padding: 7em 5em;
+}
+.home-section .home-content .home-bg .name{
+    position: relative;
+    background: #02060fb0;
+   
+width: 20em;
+height:  10em;
+margin-top: 15em;
+margin-left: 15em;
+padding-left: 1em;
+border-radius: 0em 7em 0 7em;
+text-align: center;
+line-height: 0.2em;
+
+}
+
+.home-section .home-content .home-bg h2{
+    position:absolute;
+    font-weight: 400;
+    font-size: 25px;
+    font-family: cursive;
+   padding-left: 1em;
+   
+   
+}
+.home-section .home-content .home-bg .style-name{
+    font-family: cursive;
+    font-size: 33px;
+
+}
+.bg-image{
+    background-color: #0a0b0b;
+}
+
+.home-image{
+    position:absolute;
+    background-image: url("images/12345.jpg");
+    width:90%;
+    height:100%;
+    border-radius: 100px;
+    padding-left: 1em;
+    margin-left: 1em;
+    opacity: 1;
+}
+/*about page*/
+.about-page{
+    width: 100%;
+    left: 260px;
+    height: max-content;
+}
+.about-page .about-head{
+    margin-top: 5em;
+    text-align: center;
+   
+}
+.about-page .about-head h1{
+    color: #050f23;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 400;
+
+}
+.about-page .about-para p{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #02060f;
+    font-weight: 200;
+    margin-left: 270px;
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+.about-page .about-link{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #050f23;
+    font-weight: 300;
+    margin-left: 45%;
+    text-decoration: none;
+    background: #015475 25px 25px;
+    border-radius: 30px;
+    padding: 0.5em;
+    margin-top: 10em;
+   
+
 }
