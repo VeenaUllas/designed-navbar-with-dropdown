@@ -228,7 +228,7 @@ padding-top: 5px;
 height: 54px;
 width: 54px;
 object-fit: cover;
-border-radius: 15px;
+border-radius: 50px;
 transition: all 0.5s ease;
 
 }
@@ -270,7 +270,7 @@ display: none;
 .sidebar.close ~ .home-section{
     left: 78px;
     width: calc(100% - 78px);
-    background-color: #12c0de3a;
+    background-color:whitesmoke;
 }
 .home-section .bx-menu{
     position: fixed;
@@ -281,7 +281,8 @@ display: none;
 .home-section .home-content .bx-menu{
     width: 100%;
     padding: 2px;
-    color: #050f23;
+    margin-top: 0.35em;
+    color: #eff0f2;
     font-size: 35px;
     cursor: pointer;  
    
@@ -292,93 +293,66 @@ display: none;
     height: 100vh;
     width: calc(100%-260px);
     transition: all 0.5s ease;
-    background: #dbdce1;
+    background:  #02060f;
    }
 .home-section .home-content .home-bg{
     color: white;
     padding: 7em 5em;
+  
 }
 .home-section .home-content .home-bg .name{
     position: relative;
-    background: #02060fb0;
-   
-width: 20em;
-height:  10em;
-margin-top: 15em;
+    background-color: #0f1a2e; 
+width: 50em;
+height:  30em;
+margin-top: 5em;
 margin-left: 15em;
-padding-left: 1em;
-border-radius: 0em 7em 0 7em;
+padding-left: 10em;
+padding-top: 5em;
+border-radius: 7em 7em 7em 7em;
 text-align: center;
-line-height: 0.2em;
+line-height: 0.1em;
 
 }
 
 .home-section .home-content .home-bg h2{
     position:absolute;
-    font-weight: 400;
-    font-size: 25px;
+    font-weight: 100;
+    font-size: 19px;
     font-family: cursive;
-   padding-left: 1em;
+   padding-left: 8em;
+   padding-top: 3em;
+   text-align: center;
    
    
 }
 .home-section .home-content .home-bg .style-name{
     font-family: cursive;
     font-size: 33px;
-
-}
-.bg-image{
-    background-color: #0a0b0b;
-}
-
-.home-image{
-    position:absolute;
-    background-image: url("images/12345.jpg");
-    width:90%;
-    height:100%;
-    border-radius: 100px;
-    padding-left: 1em;
-    margin-left: 1em;
-    opacity: 1;
-}
-/*about page*/
-.about-page{
-    width: 100%;
-    left: 260px;
-    height: max-content;
-}
-.about-page .about-head{
-    margin-top: 5em;
+    padding-top: 0.8em;
     text-align: center;
-   
-}
-.about-page .about-head h1{
-    color: #050f23;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-    font-weight: 400;
 
 }
-.about-page .about-para p{
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    color: #02060f;
-    font-weight: 200;
-    margin-left: 270px;
-    margin-top: 2em;
-    margin-bottom: 3em;
-}
-.about-page .about-link{
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
-    color: #050f23;
-    font-weight: 300;
-    margin-left: 45%;
-    text-decoration: none;
-    background: #015475 25px 25px;
-    border-radius: 30px;
-    padding: 0.5em;
-    margin-top: 10em;
+.home-section .home-content .home-bg h3{
+    position:absolute;
+    font-weight: 100;
+    font-size: 19px;
+    font-family: cursive;
+   padding-left: 4em;
+   padding-top: 7em;
+   text-align: center;
    
-
 }
+.home-section .home-content .home-bg .bro{
+    position:absolute;
+    font-weight: 100;
+    font-size: 19px;
+    font-family: cursive;
+   padding-left: 5.5em;
+   padding-top: 9em;
+   text-align: center;
+   
+}
+
+
+
